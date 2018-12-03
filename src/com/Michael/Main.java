@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         Matrix matrix = null;
         try {
-            matrix = Matrix.random(1, 5);
+            matrix = Matrix.random(6, 5);
 
             PrintWriter PW = new PrintWriter(System.out);
             matrix.print(PW, 5, 3);
