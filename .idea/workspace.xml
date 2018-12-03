@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2584d688-5557-4410-bf46-92c3246f1e58" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nLab_1/com/Michael/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nLab_1/com/Michael/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nLab_1/com/Michael/Matrix.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nLab_1/com/Michael/Matrix.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nLab_1/com/Michael/ValueEnforcer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nLab_1/com/Michael/ValueEnforcer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Michael/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Michael/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Michael/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Michael/Matrix.java" afterDir="false" />
-    </list>
+    <list default="true" id="2584d688-5557-4410-bf46-92c3246f1e58" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -176,12 +169,12 @@
       <updated>1543348720199</updated>
       <workItem from="1543348724321" duration="16199000" />
       <workItem from="1543400704127" duration="103000" />
-      <workItem from="1543826476747" duration="1352000" />
+      <workItem from="1543826476747" duration="1735000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17654000" />
+    <option name="totallyTimeSpent" value="18037000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1455" height="935" extended-state="6" />
