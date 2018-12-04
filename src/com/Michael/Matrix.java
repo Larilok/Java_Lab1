@@ -11,9 +11,6 @@ import static com.Michael.ValueEnforcer.notNull;
 public class Matrix {
     private final double[][] m_Data;
 
-    private final int m_Rows;
-    private final int m_Cols;
-
     /**
      * Construct an Rows-by-Cols matrix of 0.0
      *
@@ -25,31 +22,7 @@ public class Matrix {
         ValueEnforcer.isGT0(Rows, "Rows");
         ValueEnforcer.isGT0(Cols, "Cols");
 
-        m_Rows = Rows;
-        m_Cols = Cols;
         m_Data = new double[Rows][Cols];
-    }
-
-    /**
-     * Construct a matrix from 2-dimensional array.  All rows must have the same length.
-     *
-     * @param Other             2-dimensional array.
-     *
-     * @exception IllegalArgumentException if the of passed 2-d array is not a square matrix <code>rows != columns</code>
-     *
-     */
-
-    Matrix(@Nonnull final double[][] Other) {
-        notNull(Other, "Other");
-        ValueEnforcer.isGT0(Other.length, "rows");
-        ValueEnforcer.isGT0(Other[0].length, "cols");
-
-        m_Rows = Other.length;
-        m_Cols = Other[0].length;
-        for (int nRow = 0; nRow < m_Rows; nRow++)
-            if (Other[nRow].length != m_Cols)
-                throw new IllegalArgumentException("All rows must have the same length.");
-        m_Data = Other;
     }
 
     /**
@@ -58,7 +31,7 @@ public class Matrix {
      */
 
     public boolean isSymmetrical() {
-        return m_Rows == m_Cols;
+        return m_Data.length == m_Data[0].length;
     }
 
 
@@ -107,18 +80,18 @@ public class Matrix {
     public Matrix selfTranspose() {
         if(this.isSymmetrical()) {
             double temp;
-            for (int nRow = 0; nRow < m_Rows; nRow++)
-                for (int nCol = nRow + 1; nCol < m_Cols; nCol++) {
+            for (int nRow = 0; nRow < m_Data.length; nRow++)
+                for (int nCol = nRow + 1; nCol < m_Data[0].length; nCol++) {
                     temp = m_Data[nRow][nCol];
                     m_Data[nRow][nCol] = m_Data[nCol][nRow];
                     m_Data[nCol][nRow] = temp;
                 }
             return this;
         } else {
-            Matrix aTransposedMatrix = new Matrix(m_Cols,m_Rows);
+            Matrix aTransposedMatrix = new Matrix(m_Data[0].length,m_Data.length);
             final double[][] aNewArray = aTransposedMatrix.internalGetArray();
-            for (int nRow = 0; nRow < m_Rows; nRow++) {
-                for (int nCol = 0; nCol < m_Cols; nCol++)
+            for (int nRow = 0; nRow < m_Data.length; nRow++) {
+                for (int nCol = 0; nCol < m_Data[0].length; nCol++)
                     aNewArray[nCol][nRow] = m_Data[nRow][nCol];
             }
 
@@ -173,8 +146,8 @@ public class Matrix {
         int nWidthWithSpacesInBetween = nWidth + 2;
 
         aPW.println(); // start on new line.
-        for (int nRow = 0; nRow < m_Rows; nRow++) {
-            for (int nCol = 0; nCol < m_Cols; nCol++) {
+        for (int nRow = 0; nRow < m_Data.length; nRow++) {
+            for (int nCol = 0; nCol < m_Data[0].length; nCol++) {
                 // format the number
                 final String s = format.format(m_Data[nRow][nCol]);
                 // At _least_ 1 space
